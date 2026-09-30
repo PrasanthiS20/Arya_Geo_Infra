@@ -1,0 +1,416 @@
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #04101e 0%, #071a33 50%, #0b254a 100%);
+  color: #ffffff;
+  padding: 5.5rem 0 6.5rem;
+  overflow: hidden;
+}
+
+/* Background Grids & Ambient Glows */
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(30, 82, 150, 0.25) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba(212, 154, 27, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.glow-1 {
+  width: 450px;
+  height: 450px;
+  background: rgba(30, 82, 150, 0.3);
+  top: -100px;
+  right: -50px;
+}
+
+.glow-2 {
+  width: 350px;
+  height: 350px;
+  background: rgba(212, 154, 27, 0.15);
+  bottom: -50px;
+  left: -50px;
+}
+
+/* Hero Container */
+.hero-container {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Hero Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.45rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--agi-gold-400);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--agi-gold-400);
+  animation: pulseSubtle 2s infinite ease-in-out;
+}
+
+.badge-text {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--agi-gold-300);
+}
+
+/* Hero Typography */
+.hero-title {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.highlight-gold {
+  color: var(--agi-gold-400);
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-cyan {
+  color: #38bdf8;
+}
+
+.hero-description {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 580px;
+  margin-bottom: 2.2rem;
+}
+
+/* Hero Actions */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 0.95rem 2rem;
+  font-size: 0.95rem;
+}
+
+.hero-btn-outline {
+  padding: 0.95rem 2rem;
+  font-size: 0.95rem;
+}
+
+/* Tech Chips */
+.hero-tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.tech-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.35rem 0.85rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: all var(--transition-fast);
+}
+
+.tech-chip:hover {
+  background: rgba(212, 154, 27, 0.15);
+  border-color: var(--agi-gold-400);
+  color: #ffffff;
+}
+
+/* Right Column: 3D CAD Frame */
+.hero-visual-wrapper {
+  position: relative;
+}
+
+.cad-frame {
+  background: #091a30;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(14, 165, 233, 0.2);
+  transition: transform var(--transition-smooth);
+}
+
+.cad-frame:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+/* CAD Header */
+.cad-header {
+  background: #061324;
+  padding: 0.65rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cad-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #10b981; }
+
+.cad-title {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+}
+
+.cad-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.08em;
+}
+
+.live-indicator {
+  width: 6px;
+  height: 6px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #38bdf8;
+}
+
+/* CAD Image Area */
+.cad-image-container {
+  position: relative;
+  overflow: hidden;
+  background: #020912;
+}
+
+.cad-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.cad-frame:hover .cad-image {
+  transform: scale(1.03);
+}
+
+/* HUD Tags */
+.hud-tag {
+  position: absolute;
+  background: rgba(7, 23, 43, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  padding: 0.45rem 0.8rem;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+  z-index: 5;
+}
+
+.hud-top-left {
+  top: 15px;
+  left: 15px;
+}
+
+.hud-bottom-right {
+  bottom: 15px;
+  right: 15px;
+}
+
+.hud-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--agi-gold-400);
+}
+
+.hud-val {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+/* Interactive Pins */
+.interactive-pin {
+  position: absolute;
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pin-1 { top: 38%; left: 45%; }
+.pin-2 { bottom: 35%; right: 28%; }
+
+.pin-dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #38bdf8;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+.pin-pulse {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(56, 189, 248, 0.6);
+  border-radius: 50%;
+  animation: pulseSubtle 1.8s infinite ease-out;
+}
+
+.pin-tooltip {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #04101e;
+  color: #f8fafc;
+  border: 1px solid #38bdf8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.interactive-pin:hover .pin-tooltip {
+  opacity: 1;
+}
+
+/* CAD Footer Metrics */
+.cad-footer {
+  background: #07172b;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--agi-gold-400);
+}
+
+.metric-label {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.metric-divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+  .cad-image {
+    height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 3.5rem 0 4.5rem;
+  }
+  .hero-title {
+    font-size: 2.35rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-btn, .hero-btn-outline {
+    width: 100%;
+  }
+  .cad-image {
+    height: 240px;
+  }
+  .cad-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .metric-divider {
+    display: none;
+  }
+}

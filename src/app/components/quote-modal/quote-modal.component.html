@@ -1,0 +1,162 @@
+@if (modalService.isQuoteModalOpen()) {
+  <div class="modal-backdrop" (click)="close()">
+    <div class="modal-card" (click)="$event.stopPropagation()">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <span class="modal-tag">PROJECT ESTIMATION</span>
+          <h3 class="modal-title">Request a Formal Quote</h3>
+        </div>
+        <button class="modal-close-btn" (click)="close()" aria-label="Close Modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        @if (!isSubmitted()) {
+          <p class="modal-intro">
+            Connect with our engineering principals for a detailed scope review and techno-commercial proposal.
+          </p>
+
+          <form (ngSubmit)="onSubmit()" class="quote-form">
+            <div class="form-grid">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="req">*</span></label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  [(ngModel)]="formData.fullName" 
+                  name="fullName" 
+                  required 
+                  placeholder="e.g. Rajesh Sharma"
+                />
+              </div>
+
+              <!-- Organization -->
+              <div class="form-group">
+                <label for="organization">Company / Agency</label>
+                <input 
+                  type="text" 
+                  id="organization" 
+                  [(ngModel)]="formData.organization" 
+                  name="organization" 
+                  placeholder="e.g. National Highways Authority"
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Work Email <span class="req">*</span></label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  [(ngModel)]="formData.email" 
+                  name="email" 
+                  required 
+                  placeholder="name@company.com"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  [(ngModel)]="formData.phone" 
+                  name="phone" 
+                  placeholder="+91 98765 43210"
+                />
+              </div>
+
+              <!-- Service Type -->
+              <div class="form-group full-span">
+                <label for="serviceType">Primary Service Specialization</label>
+                <select id="serviceType" [(ngModel)]="formData.serviceType" name="serviceType">
+                  <option value="">-- Select Required Capability --</option>
+                  <option value="Highway & Road Design">Highway & Road Design</option>
+                  <option value="AutoCAD Design & Drafting">AutoCAD Design & Drafting</option>
+                  <option value="OpenRoads Designer Services">OpenRoads Designer Services</option>
+                  <option value="Infrastructure Engineering">Infrastructure Engineering</option>
+                  <option value="Land Development Planning & Design">Land Development Planning & Design</option>
+                  <option value="Surveying & Engineering Support">Surveying & Engineering Support</option>
+                  <option value="GIS & Geospatial Solutions">GIS & Geospatial Solutions</option>
+                  <option value="Topographical & Infrastructure Data Processing">Topographical & Infrastructure Data Processing</option>
+                  <option value="Quantity Estimation & BOQ Support">Quantity Estimation & BOQ Support</option>
+                  <option value="As-Built Drawings & Documentation">As-Built Drawings & Documentation</option>
+                  <option value="3D / Digital Infrastructure Solutions">3D / Digital Infrastructure Solutions</option>
+                  <option value="Engineering Consultancy & Project Support">Engineering Consultancy & Project Support</option>
+                </select>
+              </div>
+
+              <!-- Timeline -->
+              <div class="form-group">
+                <label for="timeline">Target Timeline</label>
+                <select id="timeline" [(ngModel)]="formData.timeline" name="timeline">
+                  <option value="Immediate (1-2 weeks)">Immediate (1-2 weeks)</option>
+                  <option value="Standard (1-2 months)">Standard (1-2 months)</option>
+                  <option value="Long Term Tender / Project">Long Term Tender / Project</option>
+                </select>
+              </div>
+
+              <!-- Location -->
+              <div class="form-group">
+                <label for="projectLocation">Project Location / Region</label>
+                <input 
+                  type="text" 
+                  id="projectLocation" 
+                  [(ngModel)]="formData.projectLocation" 
+                  name="projectLocation" 
+                  placeholder="e.g. Maharashtra, India / Gulf"
+                />
+              </div>
+
+              <!-- Scope Details -->
+              <div class="form-group full-span">
+                <label for="scopeDetails">Project Scope &amp; Deliverable Requirements</label>
+                <textarea 
+                  id="scopeDetails" 
+                  rows="3" 
+                  [(ngModel)]="formData.scopeDetails" 
+                  name="scopeDetails"
+                  placeholder="Describe your corridor length, survey scale, CAD standards, software preferences, or deliverables needed..."
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary text-dark" (click)="close()">Cancel</button>
+              <button type="submit" class="btn btn-primary submit-btn" [disabled]="isSubmitting()">
+                @if (isSubmitting()) {
+                  <span>Processing...</span>
+                } @else {
+                  <span>Submit Request</span>
+                }
+              </button>
+            </div>
+          </form>
+        } @else {
+          <!-- Success State -->
+          <div class="success-state">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <h4 class="success-title">Thank You, {{ formData.fullName }}!</h4>
+            <p class="success-msg">
+              Your quote request for <strong>{{ formData.serviceType || 'Infrastructure Services' }}</strong> has been received by our engineering team. We will contact you at <strong>{{ formData.email }}</strong> within 24 business hours with a proposal.
+            </p>
+            <button class="btn btn-primary" (click)="close()">Done</button>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+}

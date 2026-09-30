@@ -1,0 +1,83 @@
+<section id="why-us" class="section why-us-section">
+  <div class="container">
+    <!-- Header -->
+    <div class="why-us-header-row">
+      <div>
+        <div class="section-tag">THE ARYA GEO INFRA DIFFERENCE</div>
+        <h2 class="section-title">Why Arya Geo Infra?</h2>
+      </div>
+      <div>
+        <p class="section-desc">
+          We combine experienced engineering professionals with modern design and digital technologies.
+        </p>
+      </div>
+    </div>
+
+    <!-- 6 Card Grid (5 Feature Cards + 1 Navy Signature Commitment Card) -->
+    <div class="why-us-grid">
+      @for (item of features; track item.id) {
+        <div class="why-card">
+          <div class="why-icon-box">
+            @switch (item.icon) {
+              @case ('users') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              }
+              @case ('cpu') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                  <line x1="9" y1="1" x2="9" y2="4"/>
+                  <line x1="15" y1="1" x2="15" y2="4"/>
+                  <line x1="9" y1="20" x2="9" y2="23"/>
+                  <line x1="15" y1="20" x2="15" y2="23"/>
+                  <line x1="20" y1="9" x2="23" y2="9"/>
+                  <line x1="20" y1="14" x2="23" y2="14"/>
+                  <line x1="1" y1="9" x2="4" y2="9"/>
+                  <line x1="1" y1="14" x2="4" y2="14"/>
+                </svg>
+              }
+              @case ('target') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="6"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+              }
+              @case ('shield-check') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+              }
+              @case ('clock') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              }
+            }
+          </div>
+          <h3 class="why-card-title">{{ item.title }}</h3>
+          <p class="why-card-desc">{{ item.desc }}</p>
+        </div>
+      }
+
+      <!-- 6th Card: Signature Navy Commitment Card -->
+      <div class="commitment-card">
+        <div class="commitment-quote-icon">“</div>
+        <blockquote class="commitment-quote">
+          Engineering better possibilities for a connected future.
+        </blockquote>
+        <div class="commitment-footer">
+          <span class="commitment-tag">OUR COMMITMENT</span>
+          <div class="commitment-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

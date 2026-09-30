@@ -1,0 +1,118 @@
+<section id="hero" class="hero-section">
+  <!-- Futuristic Background Grid & Ambient Glows -->
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-grid-pattern"></div>
+  <div class="hero-glow glow-1"></div>
+  <div class="hero-glow glow-2"></div>
+
+  <div class="container hero-container">
+    <!-- Left Column: Typography & CTAs -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span class="badge-text">PRECISION INFRASTRUCTURE & DIGITAL TWINS</span>
+      </div>
+
+      <h1 class="hero-title">
+        Engineering<br />
+        <span class="highlight-gold">better</span><br />
+        possibilities for a<br />
+        <span class="highlight-cyan">connected</span> future.
+      </h1>
+
+      <p class="hero-description">
+        Professional design, engineering, surveying, and technology-driven services for roads, highways, land development, and infrastructure projects — from initial planning and design through execution.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="hero-actions">
+        <button class="btn btn-primary hero-btn" (click)="scrollTo('services')">
+          <span>EXPLORE SOLUTIONS</span>
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+
+        <button class="btn btn-secondary hero-btn-outline" (click)="scrollTo('why-us')">
+          <span>WHY ARYA GEO INFRA</span>
+        </button>
+      </div>
+
+      <!-- Quick Platform Capability Chips -->
+      <div class="hero-tech-chips">
+        <span class="tech-chip">Bentley OpenRoads</span>
+        <span class="tech-chip">AutoCAD 2D/3D</span>
+        <span class="tech-chip">GIS Spatial Analysis</span>
+        <span class="tech-chip">BIM Digital Delivery</span>
+      </div>
+    </div>
+
+    <!-- Right Column: Interactive 3D Digital Twin Visual Card -->
+    <div class="hero-visual-wrapper">
+      <div class="cad-frame">
+        <!-- Frame Header -->
+        <div class="cad-header">
+          <div class="cad-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="cad-title">BIM 3D DIGITAL CORRIDOR MODEL v2.6</div>
+          <div class="cad-status">
+            <span class="live-indicator"></span> LIVE GIS FEED
+          </div>
+        </div>
+
+        <!-- Visual Media -->
+        <div class="cad-image-container">
+          <img 
+            src="assets/images/hero-infrastructure.jpg" 
+            alt="Arya Geo Infra 3D Highway & Infrastructure Digital Twin Modeling" 
+            class="cad-image"
+          />
+
+          <!-- Interactive HUD Overlays & Pins -->
+          <div class="hud-tag hud-top-left">
+            <div class="hud-label">SURVEY ACCURACY</div>
+            <div class="hud-val">Sub-Centimeter RTK</div>
+          </div>
+
+          <div class="hud-tag hud-bottom-right">
+            <div class="hud-label">ROADWAY ALIGNMENT</div>
+            <div class="hud-val">IRC & AASHTO Compliant</div>
+          </div>
+
+          <div class="interactive-pin pin-1" title="Interchange Geometric Alignment">
+            <span class="pin-pulse"></span>
+            <span class="pin-dot"></span>
+            <span class="pin-tooltip">3D Interchange Corridor</span>
+          </div>
+
+          <div class="interactive-pin pin-2" title="GIS Topographical Contours">
+            <span class="pin-pulse"></span>
+            <span class="pin-dot"></span>
+            <span class="pin-tooltip">Digital Elevation Model</span>
+          </div>
+        </div>
+
+        <!-- Frame Footer Metrics -->
+        <div class="cad-footer">
+          <div class="metric">
+            <span class="metric-num">100%</span>
+            <span class="metric-label">Precision Standards</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric">
+            <span class="metric-num">12+</span>
+            <span class="metric-label">Core Specializations</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric">
+            <span class="metric-num">End-to-End</span>
+            <span class="metric-label">Survey to Submittal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

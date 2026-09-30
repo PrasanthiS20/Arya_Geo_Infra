@@ -1,0 +1,157 @@
+/* Approach Section */
+.approach-section {
+  background: linear-gradient(180deg, #07172b 0%, #051324 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.approach-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(30, 82, 150, 0.2) 0%, transparent 70%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+  pointer-events: none;
+}
+
+.relative-z {
+  position: relative;
+  z-index: 10;
+}
+
+.tag-gold {
+  color: var(--agi-gold-400);
+}
+
+.tag-gold::before {
+  background-color: var(--agi-gold-400);
+}
+
+.approach-header {
+  margin-bottom: 3.5rem;
+}
+
+.approach-header-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.approach-title {
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  flex: 1.2;
+  min-width: 320px;
+  line-height: 1.2;
+}
+
+.approach-desc {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  flex: 1;
+  min-width: 320px;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* 3 Pillars Grid */
+.approach-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.pillar-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 154, 27, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.pillar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-number {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--agi-gold-400);
+  opacity: 0.9;
+}
+
+.pillar-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(212, 154, 27, 0.1);
+  color: var(--agi-gold-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillar-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.pillar-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.1rem;
+}
+
+.pillar-text {
+  font-size: 0.94rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
+.pillar-badge {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--agi-gold-300);
+  background: rgba(212, 154, 27, 0.08);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  display: inline-block;
+  align-self: flex-start;
+  border: 1px solid rgba(212, 154, 27, 0.2);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .approach-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .approach-title {
+    font-size: 1.95rem;
+  }
+}

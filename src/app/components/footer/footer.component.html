@@ -1,0 +1,74 @@
+<footer class="main-footer">
+  <div class="container">
+    <!-- Top Row of Footer Grid -->
+    <div class="footer-grid">
+      <!-- Column 1: Brand Info & Statement -->
+      <div class="footer-col footer-brand-col">
+        <div class="footer-logo-wrap">
+          <img src="assets/images/logo.png" alt="Arya Geo Infra Brand Logo" class="footer-logo" />
+        </div>
+        <p class="footer-tagline">
+          Arya Geo Infra provides professional design, engineering, surveying, and technology-driven services for infrastructure and development projects — ensuring precision from survey to submittal.
+        </p>
+        <div class="footer-social-row">
+          <span class="cert-pill">ISO 9001:2015 Aligned QA/QC</span>
+        </div>
+      </div>
+
+      <!-- Column 2: ENGINEERING -->
+      <div class="footer-col">
+        <h4 class="footer-heading">ENGINEERING</h4>
+        <ul class="footer-links">
+          <li><a href="#services" (click)="$event.preventDefault(); scrollTo('services')">Highway &amp; Road Design</a></li>
+          <li><a href="#services" (click)="$event.preventDefault(); scrollTo('services')">AutoCAD Drafting</a></li>
+          <li><a href="#services" (click)="$event.preventDefault(); scrollTo('services')">OpenRoads Modeling</a></li>
+          <li><a href="#services" (click)="$event.preventDefault(); scrollTo('services')">GIS &amp; Geospatial</a></li>
+          <li><a href="#services" (click)="$event.preventDefault(); scrollTo('services')">Consultancy &amp; Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: COMPANY -->
+      <div class="footer-col">
+        <h4 class="footer-heading">COMPANY</h4>
+        <ul class="footer-links">
+          <li><a href="#approach" (click)="$event.preventDefault(); scrollTo('approach')">Our Approach</a></li>
+          <li><a href="#why-us" (click)="$event.preventDefault(); scrollTo('why-us')">Why Arya Geo Infra</a></li>
+          <li><a href="#contact" (click)="$event.preventDefault(); scrollTo('contact')">Contact</a></li>
+          <li class="contact-email-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="email-icon">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:info@aryageoinfra.com" class="email-link">info&#64;aryageoinfra.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Quick Action -->
+      <div class="footer-col footer-action-col">
+        <h4 class="footer-heading">PROJECT INQUIRY</h4>
+        <p class="footer-action-desc">
+          Ready to initiate your survey, drafting, or roadway modeling deliverables?
+        </p>
+        <button class="btn btn-primary btn-sm footer-quote-btn" (click)="openQuoteModal()">
+          Request Proposal
+        </button>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright Bar matching PDF -->
+    <div class="footer-bottom">
+      <div class="copyright-text">
+        &copy; 2026 ARYA GEO INFRA. ALL RIGHTS RESERVED.
+      </div>
+      <div class="footer-bottom-pillars">
+        ENGINEERING &bull; INFRASTRUCTURE &bull; DESIGN &bull; TECHNOLOGY
+      </div>
+      <button class="scroll-top-btn" (click)="scrollToTop()" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="18 15 12 9 6 15"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</footer>

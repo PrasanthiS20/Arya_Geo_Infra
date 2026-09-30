@@ -1,0 +1,109 @@
+<!-- Top Engineering Banner -->
+<div class="top-bar">
+  <div class="container top-bar-container">
+    <div class="top-bar-left">
+      <span>ENGINEERING</span>
+      <span class="bullet">•</span>
+      <span>INFRASTRUCTURE</span>
+      <span class="bullet">•</span>
+      <span>DESIGN</span>
+      <span class="bullet">•</span>
+      <span>TECHNOLOGY</span>
+    </div>
+    <div class="top-bar-right">
+      <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+      <span>PROFESSIONAL ENGINEERING & GEOSPATIAL SERVICES</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main Sticky Header -->
+<header class="main-header" [class.scrolled]="isScrolled()">
+  <div class="container header-container">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-logo" (click)="$event.preventDefault(); scrollTo('hero')">
+      <img src="assets/images/logo.png" alt="Arya Geo Infra Logo" class="logo-img" />
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="desktop-nav" aria-label="Main Navigation">
+      <ul class="nav-list">
+        <li>
+          <a href="#services" (click)="$event.preventDefault(); scrollTo('services')" class="nav-link">
+            SERVICES
+          </a>
+        </li>
+        <li>
+          <a href="#approach" (click)="$event.preventDefault(); scrollTo('approach')" class="nav-link">
+            OUR APPROACH
+          </a>
+        </li>
+        <li>
+          <a href="#why-us" (click)="$event.preventDefault(); scrollTo('why-us')" class="nav-link">
+            WHY US
+          </a>
+        </li>
+        <li>
+          <a href="#contact" (click)="$event.preventDefault(); scrollTo('contact')" class="nav-link">
+            CONTACT
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header CTA -->
+    <div class="header-action">
+      <button class="btn btn-primary quote-btn" (click)="openQuoteModal()">
+        <span>REQUEST QUOTE</span>
+        <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <!-- Mobile Hamburger Button -->
+      <button 
+        class="mobile-toggle-btn" 
+        [class.active]="isMobileMenuOpen()" 
+        (click)="toggleMobileMenu()" 
+        aria-label="Toggle Menu"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" [class.open]="isMobileMenuOpen()">
+    <div class="mobile-drawer-content">
+      <ul class="mobile-nav-list">
+        <li>
+          <a href="#services" (click)="$event.preventDefault(); scrollTo('services')">SERVICES</a>
+        </li>
+        <li>
+          <a href="#approach" (click)="$event.preventDefault(); scrollTo('approach')">OUR APPROACH</a>
+        </li>
+        <li>
+          <a href="#why-us" (click)="$event.preventDefault(); scrollTo('why-us')">WHY US</a>
+        </li>
+        <li>
+          <a href="#contact" (click)="$event.preventDefault(); scrollTo('contact')">CONTACT</a>
+        </li>
+      </ul>
+
+      <div class="mobile-cta-wrapper">
+        <button class="btn btn-primary w-full" (click)="openQuoteModal()">
+          REQUEST QUOTE
+        </button>
+      </div>
+
+      <div class="mobile-contact-info">
+        <p><strong>Direct Inquiry:</strong> info&#64;aryageoinfra.com</p>
+        <p class="tagline">Engineering better possibilities for a connected future.</p>
+      </div>
+    </div>
+  </div>
+</header>

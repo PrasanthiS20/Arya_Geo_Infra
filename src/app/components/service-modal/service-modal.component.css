@@ -1,0 +1,87 @@
+/* Service Detail Modal */
+.service-detail-card {
+  max-width: 620px;
+}
+
+.service-highlight-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--agi-navy-900);
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+}
+
+.service-full-text {
+  font-size: 0.95rem;
+  color: var(--agi-gray-600);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.detail-section {
+  background: var(--agi-gray-50);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.detail-subhead {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--agi-navy-950);
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.01em;
+}
+
+.features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--agi-dark-800);
+  line-height: 1.45;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--agi-gold-500);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.tools-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-badge {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  color: var(--agi-navy-800);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-light);
+}

@@ -1,0 +1,148 @@
+/* Why Us Section */
+.why-us-section {
+  background-color: var(--agi-white);
+}
+
+.why-us-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+/* Feature Card */
+.why-card {
+  background: var(--agi-gray-50);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-smooth);
+}
+
+.why-card:hover {
+  background: var(--agi-white);
+  border-color: rgba(212, 154, 27, 0.4);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.why-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--agi-navy-900);
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-fast);
+}
+
+.why-icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.why-card:hover .why-icon-box {
+  background: var(--agi-navy-900);
+  color: var(--agi-gold-400);
+  border-color: var(--agi-navy-900);
+}
+
+.why-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--agi-navy-950);
+  margin-bottom: 0.85rem;
+}
+
+.why-card-desc {
+  font-size: 0.94rem;
+  color: var(--agi-gray-600);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* Signature Commitment Card (6th Card in PDF) */
+.commitment-card {
+  background: linear-gradient(135deg, #07172b 0%, #0b2548 100%);
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-navy);
+  border: 1px solid rgba(212, 154, 27, 0.25);
+  transition: transform var(--transition-smooth);
+}
+
+.commitment-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--agi-gold-400);
+}
+
+.commitment-quote-icon {
+  font-family: Georgia, serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--agi-gold-400);
+  opacity: 0.35;
+  margin-bottom: -1rem;
+}
+
+.commitment-quote {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.commitment-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.commitment-tag {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--agi-gold-400);
+  white-space: nowrap;
+}
+
+.commitment-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(212, 154, 27, 0.3);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+}

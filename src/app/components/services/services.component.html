@@ -1,0 +1,188 @@
+<section id="services" class="section services-section">
+  <div class="container">
+    <!-- Header Area -->
+    <div class="services-header-row">
+      <div class="services-header-left">
+        <div class="section-tag">CORE CAPABILITIES</div>
+        <h2 class="section-title">Integrated Engineering Services</h2>
+      </div>
+      <div class="services-header-right">
+        <p class="section-desc">
+          Specialized technical support across the entire project lifecycle, from surveying to as-built documentation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Category Filter Bar -->
+    <div class="services-controls">
+      <div class="category-pills">
+        <button 
+          class="cat-pill" 
+          [class.active]="selectedCategory() === 'all'" 
+          (click)="setCategory('all')"
+        >
+          All Specializations (12)
+        </button>
+        <button 
+          class="cat-pill" 
+          [class.active]="selectedCategory() === 'design'" 
+          (click)="setCategory('design')"
+        >
+          Roads & CAD
+        </button>
+        <button 
+          class="cat-pill" 
+          [class.active]="selectedCategory() === 'modeling'" 
+          (click)="setCategory('modeling')"
+        >
+          3D & OpenRoads
+        </button>
+        <button 
+          class="cat-pill" 
+          [class.active]="selectedCategory() === 'surveying'" 
+          (click)="setCategory('surveying')"
+        >
+          Survey & Topo
+        </button>
+        <button 
+          class="cat-pill" 
+          [class.active]="selectedCategory() === 'gis'" 
+          (click)="setCategory('gis')"
+        >
+          GIS & Geospatial
+        </button>
+        <button 
+          class="cat-pill" 
+          [class.active]="selectedCategory() === 'engineering'" 
+          (click)="setCategory('engineering')"
+        >
+          Consulting & BOQ
+        </button>
+      </div>
+    </div>
+
+    <!-- 12 Core Services Cards Grid -->
+    <div class="services-grid">
+      @for (service of filteredServices(); track service.id) {
+        <div class="service-card" (click)="openServiceDetails(service)">
+          <!-- Card Top Row -->
+          <div class="card-top">
+            <div class="service-icon-box">
+              @switch (service.icon) {
+                @case ('road') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19L8 5M20 19l-4-14M12 5v2m0 6v2m0 6v2"/>
+                  </svg>
+                }
+                @case ('drafting') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+                    <path d="m15 5 4 4"/>
+                  </svg>
+                }
+                @case ('corridor') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                    <polyline points="2 17 12 22 22 17"/>
+                    <polyline points="2 12 12 17 22 12"/>
+                  </svg>
+                }
+                @case ('bridge') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 17h18M3 12h18M6 12v5M18 12v5M10 12a4 4 0 0 1 4 0"/>
+                  </svg>
+                }
+                @case ('land') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"/>
+                  </svg>
+                }
+                @case ('theodolite') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="7" r="4"/>
+                    <path d="M12 11v4M8 21l4-6 4 6M5 21h14"/>
+                  </svg>
+                }
+                @case ('globe') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                  </svg>
+                }
+                @case ('contour') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 18c4-2 6-8 10-8s5 6 8 4M3 12c3-1 6-4 9-4s6 6 9 3M3 6c4 0 7-3 10-3s5 4 8 2"/>
+                  </svg>
+                }
+                @case ('calculator') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="2" width="16" height="20" rx="2"/>
+                    <line x1="8" y1="6" x2="16" y2="6"/>
+                    <line x1="16" y1="14" x2="16" y2="18"/>
+                    <path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01"/>
+                  </svg>
+                }
+                @case ('document') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10 9 9 9 8 9"/>
+                  </svg>
+                }
+                @case ('cube') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
+                }
+                @default {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                  </svg>
+                }
+              }
+            </div>
+            <span class="card-accent-tag">{{ service.category | uppercase }}</span>
+          </div>
+
+          <!-- Card Body -->
+          <h3 class="service-card-title">{{ service.title }}</h3>
+          <p class="service-card-desc">{{ service.shortDesc }}</p>
+
+          <!-- Card Footer Actions -->
+          <div class="service-card-footer">
+            <span class="learn-more-link">
+              Explore Capability
+              <svg class="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </span>
+
+            <button 
+              class="quick-quote-btn" 
+              title="Request a quote for {{ service.title }}"
+              (click)="requestQuoteForService(service, $event)"
+            >
+              Get Quote
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Toggle Count Footer (Matching PDF: "Showing all 12 core service specializations. Show less") -->
+    <div class="services-footer-toggle">
+      <span>
+        Showing {{ filteredServices().length }} of {{ services.length }} core service specializations.
+      </span>
+      <button class="toggle-link-btn" (click)="toggleShowAll()">
+        {{ showAll() ? 'Show less' : 'Show all 12' }}
+      </button>
+    </div>
+  </div>
+</section>

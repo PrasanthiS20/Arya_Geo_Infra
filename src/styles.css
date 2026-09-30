@@ -1,0 +1,277 @@
+/* Arya Geo Infra - Global Design System & Styles */
+:root {
+  /* Brand Primary Colors */
+  --agi-navy-950: #04101e;
+  --agi-navy-900: #07172b;
+  --agi-navy-800: #0a213e;
+  --agi-navy-700: #0f2d52;
+  --agi-navy-600: #163b6b;
+  --agi-blue-500: #1e5296;
+  --agi-blue-400: #3b82f6;
+
+  /* Brand Accent Golds */
+  --agi-gold-600: #b58012;
+  --agi-gold-500: #d49a1b;
+  --agi-gold-400: #e5aa20;
+  --agi-gold-300: #f3be43;
+  --agi-gold-100: #fef7e6;
+
+  /* Neutral & Dark Tones */
+  --agi-dark-900: #0f172a;
+  --agi-dark-800: #1e293b;
+  --agi-dark-700: #334155;
+  --agi-gray-600: #475569;
+  --agi-gray-500: #64748b;
+  --agi-gray-400: #94a3b8;
+  --agi-gray-200: #e2e8f0;
+  --agi-gray-100: #f1f5f9;
+  --agi-gray-50: #f8fafc;
+  --agi-white: #ffffff;
+
+  /* UI Functional Tokens */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-dark-section: var(--agi-navy-900);
+  --bg-card: #ffffff;
+  --border-light: #e2e8f0;
+  --border-dark: rgba(255, 255, 255, 0.1);
+
+  /* Typography */
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(7, 23, 43, 0.08), 0 2px 4px -2px rgba(7, 23, 43, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(7, 23, 43, 0.08), 0 4px 6px -4px rgba(7, 23, 43, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(7, 23, 43, 0.1), 0 8px 10px -6px rgba(7, 23, 43, 0.04);
+  --shadow-gold: 0 10px 25px -5px rgba(212, 154, 27, 0.3);
+  --shadow-navy: 0 15px 35px -5px rgba(7, 23, 43, 0.4);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* CSS Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--agi-dark-700);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--agi-navy-950);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+p {
+  color: var(--agi-gray-600);
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Global Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.section {
+  padding-block: 5.5rem;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-block: 3.5rem;
+  }
+}
+
+/* Section Header styling */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--agi-gold-500);
+  margin-bottom: 0.85rem;
+}
+
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 2px;
+  background-color: var(--agi-gold-500);
+  border-radius: 2px;
+}
+
+.section-title {
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: var(--agi-navy-950);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.85rem;
+  }
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--agi-gray-600);
+  max-width: 650px;
+  line-height: 1.65;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--agi-gold-400) 0%, var(--agi-gold-500) 100%);
+  color: var(--agi-navy-950);
+  border-color: var(--agi-gold-400);
+  box-shadow: 0 4px 14px rgba(212, 154, 27, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--agi-gold-300) 0%, var(--agi-gold-400) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 154, 27, 0.45);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--agi-white);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--agi-white);
+  transform: translateY(-2px);
+}
+
+.btn-navy-outline {
+  background: transparent;
+  color: var(--agi-navy-900);
+  border: 1.5px solid var(--agi-navy-800);
+}
+
+.btn-navy-outline:hover {
+  background: var(--agi-navy-900);
+  color: var(--agi-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--agi-gold-500);
+}

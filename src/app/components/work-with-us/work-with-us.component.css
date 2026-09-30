@@ -1,0 +1,93 @@
+/* Work With Us Section */
+.work-with-us-section {
+  background-color: var(--agi-gray-50);
+  border-top: 1px solid var(--border-light);
+}
+
+.cta-box {
+  background: var(--agi-white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 4.5rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-glow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(212, 154, 27, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 5;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.cta-tag {
+  margin-bottom: 1rem;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--agi-navy-950);
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.cta-desc {
+  font-size: 1.08rem;
+  color: var(--agi-gray-600);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn-primary {
+  padding: 0.95rem 2.2rem;
+  font-size: 0.95rem;
+}
+
+.cta-btn-outline {
+  padding: 0.95rem 2.2rem;
+  font-size: 0.95rem;
+  background: #ffffff;
+}
+
+.mail-icon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .cta-box {
+    padding: 3rem 1.5rem;
+  }
+  .cta-title {
+    font-size: 1.85rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta-btn-primary, .cta-btn-outline {
+    width: 100%;
+  }
+}
