@@ -137,6 +137,46 @@ export class ServicesComponent {
       fullDesc: 'Independent peer reviews, techno-commercial feasibility studies, design optimization recommendations, statutory approvals support, and technical project management.',
       features: ['Design Peer Review & Audit', 'Techno-Commercial Feasibility', 'Project Schedule Advisory', 'Vendor & Submittal Verification'],
       tools: ['MS Project', 'Primavera P6', 'Technical QA Matrices']
+    },
+    {
+      id: 'civil-highway-construction',
+      title: 'Civil & Highway Construction',
+      shortDesc: 'End-to-end execution of roadway, highway, earthwork, and civil infrastructure construction projects.',
+      category: 'construction',
+      icon: 'construction',
+      fullDesc: 'Turnkey civil and highway construction execution covering site clearing, subgrade stabilization, granular sub-base (GSB), wet mix macadam (WMM), asphalt and rigid concrete paving, culverts, and roadside drainage systems.',
+      features: ['Highway & Urban Paving (Flexible & Rigid)', 'Bulk Earthwork & Subgrade Stabilization', 'Cross-Drainage, Culverts & Minor Bridges', 'Roadside Utilities & Stormwater Infrastructure'],
+      tools: ['Heavy Fleet Telematics', 'Batching Plant Automation', 'Total Station Grade Control', 'MoRTH & IRC Specifications']
+    },
+    {
+      id: 'construction-project-management',
+      title: 'Construction Management & Site Supervision',
+      shortDesc: 'Comprehensive on-site supervision, milestone tracking, work sequencing, and safety compliance.',
+      category: 'construction',
+      icon: 'hard-hat',
+      fullDesc: 'Dedicated on-site construction supervision and project management consultancy (PMC). We ensure strict adherence to engineering drawings, contractor coordination, daily site logs, HSE safety standards, and milestone delivery.',
+      features: ['Daily Site Inspection & Progress Logging', 'Contractor Coordination & Work Sequencing', 'Critical Path Method (CPM) Schedule Tracking', 'Site HSE & Safety Compliance Audits'],
+      tools: ['Primavera P6', 'MS Project', 'Field Inspection Apps', 'Site Audit Logs']
+    },
+    {
+      id: 'construction-qa-qc-testing',
+      title: 'Construction QA/QC & Material Testing',
+      shortDesc: 'Rigorous quality control, field inspections, and laboratory material testing ensuring standard compliance.',
+      category: 'construction',
+      icon: 'testing',
+      fullDesc: 'Comprehensive quality assurance and quality control (QA/QC) programs covering field density testing, concrete slump and cube compression testing, bitumen extraction, aggregate grading, and standard conformance certification.',
+      features: ['Compaction & Field Density Testing', 'Concrete & Bituminous Mix Quality Audits', 'Non-Destructive Testing (NDT) & Rebar Verification', 'Quality Inspection Test Plans (ITP) & Sign-Offs'],
+      tools: ['IS / IRC / ASTM Standards', 'Calibration Matrices', 'QA/QC Test Dossiers', 'Material Testing Protocols']
+    },
+    {
+      id: 'site-development-earthworks',
+      title: 'Site Development & Earthworks Execution',
+      shortDesc: 'Precision grading, bulk excavation, ground improvement, and utilities execution for large-scale sites.',
+      category: 'construction',
+      icon: 'earthwork',
+      fullDesc: 'Specialized site development and earthwork contracting services including precision cut/fill grading, slope stabilization, retaining walls, underground utility trenches, and plot demarcation for industrial parks and commercial developments.',
+      features: ['Precision Cut & Fill Grading', 'Retaining Walls & Soil Slope Stabilization', 'Underground Utility Trenching & Ducts', 'Industrial & Commercial Site Preparation'],
+      tools: ['3D Machine Control Systems', 'Civil 3D Surface Verification', 'Compaction Rollers', 'Drainage Networks']
     }
   ];
 

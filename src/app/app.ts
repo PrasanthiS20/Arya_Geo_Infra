@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ApproachComponent } from './components/approach/approach.component';
+import { CeoMessageComponent } from './components/ceo-message/ceo-message.component';
 import { WhyUsComponent } from './components/why-us/why-us.component';
 import { WorkWithUsComponent } from './components/work-with-us/work-with-us.component';
 import { QuoteModalComponent } from './components/quote-modal/quote-modal.component';
@@ -19,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HeroComponent,
     ServicesComponent,
     ApproachComponent,
+    CeoMessageComponent,
     WhyUsComponent,
     WorkWithUsComponent,
     QuoteModalComponent,

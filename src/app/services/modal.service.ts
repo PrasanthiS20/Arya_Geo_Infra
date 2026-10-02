@@ -5,7 +5,7 @@ export interface ServiceItem {
   title: string;
   shortDesc: string;
   fullDesc?: string;
-  category: 'design' | 'modeling' | 'gis' | 'engineering' | 'surveying';
+  category: 'design' | 'modeling' | 'gis' | 'engineering' | 'surveying' | 'construction';
   icon: string;
   features?: string[];
   tools?: string[];

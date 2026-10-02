@@ -21,47 +21,54 @@
           [class.active]="selectedCategory() === 'all'" 
           (click)="setCategory('all')"
         >
-          All Specializations (12)
+          All Specializations ({{ services.length }})
+        </button>
+        <button 
+          class="cat-pill" 
+          [class.active]="selectedCategory() === 'construction'" 
+          (click)="setCategory('construction')"
+        >
+          Construction &amp; Site
         </button>
         <button 
           class="cat-pill" 
           [class.active]="selectedCategory() === 'design'" 
           (click)="setCategory('design')"
         >
-          Roads & CAD
+          Roads &amp; CAD
         </button>
         <button 
           class="cat-pill" 
           [class.active]="selectedCategory() === 'modeling'" 
           (click)="setCategory('modeling')"
         >
-          3D & OpenRoads
+          3D &amp; OpenRoads
         </button>
         <button 
           class="cat-pill" 
           [class.active]="selectedCategory() === 'surveying'" 
           (click)="setCategory('surveying')"
         >
-          Survey & Topo
+          Survey &amp; Topo
         </button>
         <button 
           class="cat-pill" 
           [class.active]="selectedCategory() === 'gis'" 
           (click)="setCategory('gis')"
         >
-          GIS & Geospatial
+          GIS &amp; Geospatial
         </button>
         <button 
           class="cat-pill" 
           [class.active]="selectedCategory() === 'engineering'" 
           (click)="setCategory('engineering')"
         >
-          Consulting & BOQ
+          Consulting &amp; BOQ
         </button>
       </div>
     </div>
 
-    <!-- 12 Core Services Cards Grid -->
+    <!-- Core Services Cards Grid -->
     <div class="services-grid">
       @for (service of filteredServices(); track service.id) {
         <div class="service-card" (click)="openServiceDetails(service)">
@@ -69,6 +76,34 @@
           <div class="card-top">
             <div class="service-icon-box">
               @switch (service.icon) {
+                @case ('construction') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="6" width="20" height="14" rx="2"/>
+                    <path d="M6 18h12M6 14h12M6 10h12M10 6v14M14 6v14"/>
+                    <path d="M12 2v4"/>
+                  </svg>
+                }
+                @case ('hard-hat') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 18h20"/>
+                    <path d="M4 18v-4a8 8 0 0 1 16 0v4"/>
+                    <path d="M10 6v8M14 6v8"/>
+                  </svg>
+                }
+                @case ('testing') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 2v7.31M14 2v7.31M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/>
+                    <path d="M5.52 16h12.96"/>
+                  </svg>
+                }
+                @case ('earthwork') {
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 20h20"/>
+                    <path d="m5 16 4-4 4 2 6-6"/>
+                    <path d="M19 8v4h-4"/>
+                    <path d="M2 12l5 3 4-2 6 4 5-3"/>
+                  </svg>
+                }
                 @case ('road') {
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 19L8 5M20 19l-4-14M12 5v2m0 6v2m0 6v2"/>
@@ -175,13 +210,13 @@
       }
     </div>
 
-    <!-- Toggle Count Footer (Matching PDF: "Showing all 12 core service specializations. Show less") -->
+    <!-- Toggle Count Footer -->
     <div class="services-footer-toggle">
       <span>
         Showing {{ filteredServices().length }} of {{ services.length }} core service specializations.
       </span>
       <button class="toggle-link-btn" (click)="toggleShowAll()">
-        {{ showAll() ? 'Show less' : 'Show all 12' }}
+        {{ showAll() ? 'Show less' : 'Show all ' + services.length }}
       </button>
     </div>
   </div>
