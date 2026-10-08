@@ -36,6 +36,30 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Deploying With Coolify
+
+Build from the repository root and serve the generated browser files as a static site. For the Nixpacks build pack, use these settings:
+
+| Setting | Value |
+| --- | --- |
+| Build Pack | `Nixpacks` |
+| Base Directory | `/` |
+| Install Command | `npm install` |
+| Build Command | `npm run build` |
+| Is Static Site | Enabled |
+| Publish Directory | `/dist/arya-geo-infra/browser` |
+| Ports Exposes | `80` |
+
+Angular 22 requires Node.js `^22.22.3 || ^24.15.0 || >=26.0.0`. Nixpacks selects only a major version, so `NIXPACKS_NODE_VERSION=22` can still supply an incompatible patch such as 22.11.0. The root `nixpacks.toml` installs Node.js 22.22.3 during setup and puts it first on `PATH` for subsequent phases. Keep `NIXPACKS_NODE_VERSION=22` to select the bootstrap runtime.
+
+Commit and push `nixpacks.toml` with the application, then redeploy in Coolify. Remove any custom Nixpacks configuration file override so the root file is discovered. If the build still reports Node.js 22.11.0, verify that Coolify deployed the commit containing this file and did not override the setup phase or its paths. To diagnose the selected runtime, temporarily set the Build Command to `node --version && npm run build`.
+
+Enable SPA fallback to `index.html` in the static web server if client-side routes are added.
+
+Do not set the Base Directory to `/dist/arya-geo-infra`. That directory contains build artifacts, not the root `package.json` needed for Nixpacks application detection. If the deployment log shows `nixpacks detect .../dist/arya-geo-infra`, change the Base Directory to `/` and redeploy.
+
+Do not use `npm start` for production hosting: it runs the Angular development server. The static-site deployment serves the production build instead.
+
 ## Running unit tests
 
 To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
