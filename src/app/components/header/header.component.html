@@ -13,10 +13,11 @@
       <span>TECHNOLOGY</span>
     </div>
     <div class="top-bar-right">
-      <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-      </svg>
-      <span>PROFESSIONAL ENGINEERING, GEOSPATIAL &amp; CONSTRUCTION SERVICES</span>
+      <span class="top-location">Hyderabad, Telangana</span>
+      <span class="bullet">•</span>
+      <a href="tel:+918008535753" class="top-phone">+91 80085 35753</a>
+      <span class="bullet">•</span>
+      <a href="mailto:info@aryageoinfra.com" class="top-mail">info&#64;aryageoinfra.com</a>
     </div>
   </div>
 </div>
@@ -35,6 +36,11 @@
         <li>
           <a href="#services" (click)="$event.preventDefault(); scrollTo('services')" class="nav-link">
             SERVICES
+          </a>
+        </li>
+        <li>
+          <a href="#clients" (click)="$event.preventDefault(); scrollTo('clients')" class="nav-link">
+            ADD CLIENTS
           </a>
         </li>
         <li>
@@ -65,17 +71,15 @@
       <button class="btn btn-primary quote-btn" (click)="openQuoteModal()">
         <span>REQUEST QUOTE</span>
         <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          <path fill-rule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd" />
         </svg>
       </button>
 
       <!-- Mobile Hamburger Button -->
-      <button 
-        class="mobile-toggle-btn" 
-        [class.active]="isMobileMenuOpen()" 
-        (click)="toggleMobileMenu()" 
-        aria-label="Toggle Menu"
-      >
+      <button class="mobile-toggle-btn" [class.active]="isMobileMenuOpen()" (click)="toggleMobileMenu()"
+        aria-label="Toggle Menu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -89,6 +93,9 @@
       <ul class="mobile-nav-list">
         <li>
           <a href="#services" (click)="$event.preventDefault(); scrollTo('services')">SERVICES</a>
+        </li>
+        <li>
+          <a href="#clients" (click)="$event.preventDefault(); scrollTo('clients')">ADD CLIENTS</a>
         </li>
         <li>
           <a href="#approach" (click)="$event.preventDefault(); scrollTo('approach')">OUR APPROACH</a>
@@ -111,7 +118,11 @@
       </div>
 
       <div class="mobile-contact-info">
-        <p><strong>Direct Inquiry:</strong> info&#64;aryageoinfra.com</p>
+        <p><strong>Corporate Office:</strong> H.No: 8-40, Indra Reddy Allwyn Colony, Rd No: 4, Miyapur, Hyderabad, TS -
+          500049</p>
+        <p><strong>Direct Desk:</strong> <a href="tel:+918008535753">+91 80085 35753</a> &bull; <a
+            href="tel:+919182092507">+91 91820 92507</a></p>
+        <p><strong>Direct Email:</strong> <a href="mailto:info@aryageoinfra.com">info&#64;aryageoinfra.com</a></p>
         <p class="tagline">Engineering better possibilities for a connected future.</p>
       </div>
     </div>

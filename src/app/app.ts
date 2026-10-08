@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ServicesComponent } from './components/services/services.component';
+import { ClientsComponent } from './components/clients/clients.component';
 import { ApproachComponent } from './components/approach/approach.component';
 import { CeoMessageComponent } from './components/ceo-message/ceo-message.component';
 import { WhyUsComponent } from './components/why-us/why-us.component';
@@ -19,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     HeroComponent,
     ServicesComponent,
+    ClientsComponent,
     ApproachComponent,
     CeoMessageComponent,
     WhyUsComponent,

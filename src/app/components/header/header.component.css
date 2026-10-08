@@ -34,13 +34,24 @@
 .top-bar-right {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.6rem;
   color: var(--agi-gold-400);
 }
 
-.top-icon {
-  width: 14px;
-  height: 14px;
+.top-location {
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.top-phone, .top-mail {
+  color: var(--agi-gold-400);
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.top-phone:hover, .top-mail:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 /* Main Header */

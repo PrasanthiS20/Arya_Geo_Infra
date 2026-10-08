@@ -1,32 +1,153 @@
 <section id="contact" class="section work-with-us-section">
-  <div class="container">
-    <div class="cta-box">
-      <!-- Ambient Glow Decor -->
-      <div class="cta-glow"></div>
+  <!-- Subtle Ambient Glow -->
+  <div class="contact-glow glow-left"></div>
+  <div class="contact-glow glow-right"></div>
 
-      <div class="cta-content">
-        <div class="section-tag cta-tag">WORK WITH US</div>
-        <h2 class="cta-title">Let's discuss your next infrastructure project</h2>
-        <p class="cta-desc">
+  <div class="container relative-z">
+    <!-- Main Executive Contact Container -->
+    <div class="executive-contact-wrapper">
+      <div class="contact-card-glow-border"></div>
+
+      <!-- Top Headline & Description -->
+      <div class="contact-header-area">
+        <div class="section-tag contact-tag">CONNECT WITH ARYA GEO INFRA</div>
+        <h2 class="contact-main-title">Let's Discuss Your Next Infrastructure Project</h2>
+        <p class="contact-main-desc">
           Whether you need highway design, CAD drafting, surveying support, civil construction execution, or geospatial solutions, our team is ready to support your project from planning through execution.
         </p>
 
-        <!-- CTA Buttons matching PDF -->
-        <div class="cta-buttons">
+        <!-- Main Action Buttons -->
+        <div class="contact-actions-row">
           <button class="btn btn-primary cta-btn-primary" (click)="openQuote()">
-            <span>REQUEST A QUOTE</span>
+            <span>REQUEST A FORMAL QUOTE</span>
             <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </button>
 
-          <a href="mailto:info@aryageoinfra.com" class="btn btn-navy-outline cta-btn-outline">
+          <a href="https://wa.me/918008535753" target="_blank" rel="noopener noreferrer" class="btn btn-secondary cta-btn-whatsapp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="whatsapp-icon">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+            <span>WHATSAPP INQUIRY</span>
+          </a>
+
+          <a href="mailto:info@aryageoinfra.com" class="btn btn-outline-white cta-btn-email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mail-icon">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
             </svg>
             <span>EMAIL OUR TEAM</span>
           </a>
+        </div>
+      </div>
+
+      <!-- Modernized 3-Pillar Office Contact Cards -->
+      <div class="modern-contact-grid">
+        <!-- Pillar 1: Corporate Office Address -->
+        <div class="modern-contact-card card-address">
+          <div class="card-header-line">
+            <div class="icon-avatar avatar-gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="card-badge">HEADQUARTERS</div>
+          </div>
+
+          <h3 class="card-title">Corporate Office</h3>
+          
+          <div class="address-content">
+            <p class="address-line main-address">
+              <strong>H.No: 8-40, Indra Reddy Allwyn Colony</strong><br/>
+              <span>Road No: 4, Miyapur, Hyderabad</span><br/>
+              <span>Telangana &ndash; 500049, India</span>
+            </p>
+          </div>
+
+          <div class="card-footer-action">
+            <a 
+              href="https://maps.google.com/?q=H.No+8-40+Indra+Reddy+Allwyn+Colony+Road+No+4+Miyapur+Hyderabad+500049" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="map-link-btn"
+            >
+              <span>View On Google Maps</span>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Phone Numbers & Direct Lines -->
+        <div class="modern-contact-card card-phone">
+          <div class="card-header-line">
+            <div class="icon-avatar avatar-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="card-badge pulse-badge">
+              <span class="live-dot"></span> DIRECT DESK
+            </div>
+          </div>
+
+          <h3 class="card-title">Call &amp; WhatsApp Support</h3>
+
+          <div class="phone-numbers-list">
+            <div class="phone-item">
+              <span class="phone-role">Principal Contact:</span>
+              <a href="tel:+918008535753" class="phone-link">
+                <strong>+91 80085 35753</strong>
+                <span class="call-tag">Call</span>
+              </a>
+            </div>
+
+            <div class="phone-item">
+              <span class="phone-role">Project Operations:</span>
+              <a href="tel:+919182092507" class="phone-link">
+                <strong>+91 91820 92507</strong>
+                <span class="call-tag">Call</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="card-footer-action">
+            <span class="availability-text">Available Mon &ndash; Sat &bull; 9:00 AM &ndash; 7:00 PM IST</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Official Correspondence -->
+        <div class="modern-contact-card card-email">
+          <div class="card-header-line">
+            <div class="icon-avatar avatar-cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="card-badge">ELECTRONIC RFQ</div>
+          </div>
+
+          <h3 class="card-title">Email Inquiries</h3>
+
+          <div class="email-box">
+            <p class="email-subtext">Send project drawings, scope documents or tender inquiries directly to:</p>
+            <a href="mailto:info@aryageoinfra.com" class="main-email-link">
+              info&#64;aryageoinfra.com
+            </a>
+          </div>
+
+          <div class="card-footer-action">
+            <span class="turnaround-badge">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Guaranteed 24-Hr Technical Response</span>
+            </span>
+          </div>
         </div>
       </div>
     </div>

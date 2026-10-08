@@ -1,13 +1,14 @@
 <section id="hero" class="hero-section">
-  <!-- Futuristic Background Grid & Ambient Glows -->
+  <!-- Futuristic Background Glows & Patterns for Left Side -->
   <div class="hero-bg-overlay"></div>
   <div class="hero-grid-pattern"></div>
   <div class="hero-glow glow-1"></div>
   <div class="hero-glow glow-2"></div>
 
-  <div class="container hero-container">
-    <!-- Left Column: Typography & CTAs -->
-    <div class="hero-content">
+  <!-- Full 50/50 Edge-to-Edge Hero Split -->
+  <div class="hero-split-grid">
+    <!-- Left Column: Content, Typography, CTAs & Metrics -->
+    <div class="hero-content-col">
       <div class="hero-badge">
         <span class="pulse-dot"></span>
         <span class="badge-text">PRECISION INFRASTRUCTURE & DIGITAL TWINS</span>
@@ -38,7 +39,7 @@
         </button>
       </div>
 
-      <!-- Quick Platform Capability Chips -->
+      <!-- Capability Chips -->
       <div class="hero-tech-chips">
         <span class="tech-chip">Bentley OpenRoads</span>
         <span class="tech-chip">AutoCAD 2D/3D</span>
@@ -46,73 +47,65 @@
         <span class="tech-chip">Civil Construction</span>
         <span class="tech-chip">BIM Digital Twins</span>
       </div>
+
+      <!-- Inline Key Metrics -->
+      <div class="hero-metrics-bar">
+        <div class="hero-metric-item">
+          <span class="metric-num">100%</span>
+          <span class="metric-label">Precision Standards</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="hero-metric-item">
+          <span class="metric-num">16+</span>
+          <span class="metric-label">Core Specializations</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="hero-metric-item">
+          <span class="metric-num">End-to-End</span>
+          <span class="metric-label">Survey to Submittal</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Right Column: Interactive 3D Digital Twin Visual Card -->
-    <div class="hero-visual-wrapper">
-      <div class="cad-frame">
-        <!-- Frame Header -->
-        <div class="cad-header">
-          <div class="cad-dots">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
-          </div>
-          <div class="cad-title">BIM 3D DIGITAL CORRIDOR MODEL v2.6</div>
-          <div class="cad-status">
-            <span class="live-indicator"></span> LIVE GIS FEED
-          </div>
-        </div>
+    <!-- Right Column: 100% Full-Bleed BIM Visual Covering Entire Right Half with Zero Padding -->
+    <div class="hero-image-col">
+      <img 
+        src="assets/images/hero-infrastructure.jpg" 
+        alt="Arya Geo Infra 3D Highway & Infrastructure Digital Twin Modeling" 
+        class="hero-full-bim-image"
+      />
 
-        <!-- Visual Media -->
-        <div class="cad-image-container">
-          <img 
-            src="assets/images/hero-infrastructure.jpg" 
-            alt="Arya Geo Infra 3D Highway & Infrastructure Digital Twin Modeling" 
-            class="cad-image"
-          />
+      <!-- Left Gradient Edge Blend -->
+      <div class="image-edge-gradient"></div>
 
-          <!-- Interactive HUD Overlays & Pins -->
-          <div class="hud-tag hud-top-left">
-            <div class="hud-label">SURVEY ACCURACY</div>
-            <div class="hud-val">Sub-Centimeter RTK</div>
-          </div>
+      <!-- Live Stream Header Badge -->
+      <div class="bim-top-badge">
+        <span class="live-dot"></span>
+        <span>BIM 3D DIGITAL CORRIDOR MODEL &bull; LIVE GIS FEED</span>
+      </div>
 
-          <div class="hud-tag hud-bottom-right">
-            <div class="hud-label">ROADWAY ALIGNMENT</div>
-            <div class="hud-val">IRC & AASHTO Compliant</div>
-          </div>
+      <!-- Floating HUD Overlays -->
+      <div class="hud-tag hud-top-left">
+        <div class="hud-label">SURVEY ACCURACY</div>
+        <div class="hud-val">Sub-Centimeter RTK</div>
+      </div>
 
-          <div class="interactive-pin pin-1" title="Interchange Geometric Alignment">
-            <span class="pin-pulse"></span>
-            <span class="pin-dot"></span>
-            <span class="pin-tooltip">3D Interchange Corridor</span>
-          </div>
+      <div class="hud-tag hud-bottom-right">
+        <div class="hud-label">ROADWAY ALIGNMENT</div>
+        <div class="hud-val">IRC & AASHTO Compliant</div>
+      </div>
 
-          <div class="interactive-pin pin-2" title="GIS Topographical Contours">
-            <span class="pin-pulse"></span>
-            <span class="pin-dot"></span>
-            <span class="pin-tooltip">Digital Elevation Model</span>
-          </div>
-        </div>
+      <!-- Interactive Hotspot Pins -->
+      <div class="interactive-pin pin-1" title="Interchange Geometric Alignment">
+        <span class="pin-pulse"></span>
+        <span class="pin-dot"></span>
+        <span class="pin-tooltip">3D Interchange Corridor</span>
+      </div>
 
-        <!-- Frame Footer Metrics -->
-        <div class="cad-footer">
-          <div class="metric">
-            <span class="metric-num">100%</span>
-            <span class="metric-label">Precision Standards</span>
-          </div>
-          <div class="metric-divider"></div>
-          <div class="metric">
-            <span class="metric-num">16+</span>
-            <span class="metric-label">Core Specializations</span>
-          </div>
-          <div class="metric-divider"></div>
-          <div class="metric">
-            <span class="metric-num">End-to-End</span>
-            <span class="metric-label">Survey to Submittal</span>
-          </div>
-        </div>
+      <div class="interactive-pin pin-2" title="GIS Topographical Contours">
+        <span class="pin-pulse"></span>
+        <span class="pin-dot"></span>
+        <span class="pin-tooltip">Digital Elevation Model</span>
       </div>
     </div>
   </div>

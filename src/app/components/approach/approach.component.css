@@ -1,6 +1,6 @@
 /* Approach Section */
 .approach-section {
-  background: linear-gradient(180deg, #07172b 0%, #051324 100%);
+  background: linear-gradient(180deg, #01244e 0%, #01295a 60%, #023971 100%);
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -10,9 +10,9 @@
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(30, 82, 150, 0.2) 0%, transparent 70%),
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    radial-gradient(circle at 50% 0%, rgba(18, 110, 201, 0.28) 0%, transparent 70%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 100% 100%, 48px 48px, 48px 48px;
   pointer-events: none;
 }

@@ -42,7 +42,7 @@
 
 /* Category Filter Pills */
 .services-controls {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .category-pills {
@@ -76,7 +76,67 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* 12 Core Services Grid (3 Columns) */
+.highlight-pill {
+  border-color: rgba(200, 150, 46, 0.45);
+  background: rgba(200, 150, 46, 0.06);
+  color: var(--agi-navy-900);
+}
+
+/* Tool Interoperability & Construction Capabilities Banner */
+.tool-interop-banner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(200, 150, 46, 0.08) 100%);
+  border: 1px solid rgba(200, 150, 46, 0.35);
+  border-left: 5px solid var(--agi-gold-500);
+  border-radius: 10px;
+  padding: 1.1rem 1.6rem;
+  margin-bottom: 2.25rem;
+  box-shadow: 0 4px 16px rgba(1, 41, 90, 0.04);
+}
+
+.banner-icon-badge {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 10px;
+  background: var(--agi-gold-500);
+  color: var(--agi-navy-950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-icon-badge svg {
+  width: 22px;
+  height: 22px;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.banner-badge-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--agi-gold-600);
+  text-transform: uppercase;
+}
+
+.banner-headline {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--agi-navy-900);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 12+ Core Services Grid (3 Columns) */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -273,5 +333,10 @@
   }
   .service-card {
     padding: 1.5rem;
+  }
+  .tool-interop-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
 }

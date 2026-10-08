@@ -141,22 +141,22 @@ export class ServicesComponent {
     {
       id: 'civil-highway-construction',
       title: 'Civil & Highway Construction',
-      shortDesc: 'End-to-end execution of roadway, highway, earthwork, and civil infrastructure construction projects.',
+      shortDesc: 'End-to-end execution of roadway, highway, earthwork, and civil infrastructure construction projects — ORD designs, highway design or land development can be done using any of those tools.',
       category: 'construction',
       icon: 'construction',
-      fullDesc: 'Turnkey civil and highway construction execution covering site clearing, subgrade stabilization, granular sub-base (GSB), wet mix macadam (WMM), asphalt and rigid concrete paving, culverts, and roadside drainage systems.',
-      features: ['Highway & Urban Paving (Flexible & Rigid)', 'Bulk Earthwork & Subgrade Stabilization', 'Cross-Drainage, Culverts & Minor Bridges', 'Roadside Utilities & Stormwater Infrastructure'],
-      tools: ['Heavy Fleet Telematics', 'Batching Plant Automation', 'Total Station Grade Control', 'MoRTH & IRC Specifications']
+      fullDesc: 'Turnkey civil and highway construction execution covering site clearing, subgrade stabilization, granular sub-base (GSB), wet mix macadam (WMM), asphalt and rigid concrete paving, culverts, and roadside drainage systems. ORD designs, highway design or land development can be done using any of those tools.',
+      features: ['ORD, Highway & Land Development Tools Execution', 'Highway & Urban Paving (Flexible & Rigid)', 'Bulk Earthwork & Subgrade Stabilization', 'Cross-Drainage, Culverts & Minor Bridges', 'Roadside Utilities & Stormwater Infrastructure'],
+      tools: ['OpenRoads Designer (ORD)', 'Civil 3D & AutoCAD', 'Heavy Fleet Telematics', 'Batching Plant Automation', 'Total Station Grade Control', 'MoRTH & IRC Specifications']
     },
     {
       id: 'construction-project-management',
       title: 'Construction Management & Site Supervision',
-      shortDesc: 'Comprehensive on-site supervision, milestone tracking, work sequencing, and safety compliance.',
+      shortDesc: 'Comprehensive on-site supervision, milestone tracking, work sequencing, and safety compliance — ORD designs, highway design or land development can be done using any of those tools.',
       category: 'construction',
       icon: 'hard-hat',
-      fullDesc: 'Dedicated on-site construction supervision and project management consultancy (PMC). We ensure strict adherence to engineering drawings, contractor coordination, daily site logs, HSE safety standards, and milestone delivery.',
-      features: ['Daily Site Inspection & Progress Logging', 'Contractor Coordination & Work Sequencing', 'Critical Path Method (CPM) Schedule Tracking', 'Site HSE & Safety Compliance Audits'],
-      tools: ['Primavera P6', 'MS Project', 'Field Inspection Apps', 'Site Audit Logs']
+      fullDesc: 'Dedicated on-site construction supervision and project management consultancy (PMC). ORD designs, highway design or land development can be done using any of those tools. We ensure strict adherence to engineering drawings, contractor coordination, daily site logs, HSE safety standards, and milestone delivery.',
+      features: ['Multi-Platform Tool Integration (ORD, Civil 3D, CAD)', 'Daily Site Inspection & Progress Logging', 'Contractor Coordination & Work Sequencing', 'Critical Path Method (CPM) Schedule Tracking', 'Site HSE & Safety Compliance Audits'],
+      tools: ['OpenRoads Designer', 'Primavera P6', 'MS Project', 'Field Inspection Apps', 'Site Audit Logs']
     },
     {
       id: 'construction-qa-qc-testing',
@@ -164,19 +164,19 @@ export class ServicesComponent {
       shortDesc: 'Rigorous quality control, field inspections, and laboratory material testing ensuring standard compliance.',
       category: 'construction',
       icon: 'testing',
-      fullDesc: 'Comprehensive quality assurance and quality control (QA/QC) programs covering field density testing, concrete slump and cube compression testing, bitumen extraction, aggregate grading, and standard conformance certification.',
+      fullDesc: 'Comprehensive quality assurance and quality control (QA/QC) programs covering field density testing, concrete slump and cube compression testing, bitumen extraction, aggregate grading, and standard conformance certification. ORD designs, highway design or land development can be done using any of those tools.',
       features: ['Compaction & Field Density Testing', 'Concrete & Bituminous Mix Quality Audits', 'Non-Destructive Testing (NDT) & Rebar Verification', 'Quality Inspection Test Plans (ITP) & Sign-Offs'],
       tools: ['IS / IRC / ASTM Standards', 'Calibration Matrices', 'QA/QC Test Dossiers', 'Material Testing Protocols']
     },
     {
       id: 'site-development-earthworks',
       title: 'Site Development & Earthworks Execution',
-      shortDesc: 'Precision grading, bulk excavation, ground improvement, and utilities execution for large-scale sites.',
+      shortDesc: 'Precision grading, bulk excavation, ground improvement, and utilities execution for large-scale sites — ORD designs, highway design or land development can be done using any of those tools.',
       category: 'construction',
       icon: 'earthwork',
-      fullDesc: 'Specialized site development and earthwork contracting services including precision cut/fill grading, slope stabilization, retaining walls, underground utility trenches, and plot demarcation for industrial parks and commercial developments.',
-      features: ['Precision Cut & Fill Grading', 'Retaining Walls & Soil Slope Stabilization', 'Underground Utility Trenching & Ducts', 'Industrial & Commercial Site Preparation'],
-      tools: ['3D Machine Control Systems', 'Civil 3D Surface Verification', 'Compaction Rollers', 'Drainage Networks']
+      fullDesc: 'Specialized site development and earthwork contracting services including precision cut/fill grading, slope stabilization, retaining walls, underground utility trenches, and plot demarcation for industrial parks and commercial developments. ORD designs, highway design or land development can be done using any of those tools.',
+      features: ['ORD, Highway & Land Development Surface Modeling', 'Precision Cut & Fill Grading', 'Retaining Walls & Soil Slope Stabilization', 'Underground Utility Trenching & Ducts', 'Industrial & Commercial Site Preparation'],
+      tools: ['OpenRoads Designer', 'Civil 3D Surface Verification', '3D Machine Control Systems', 'Compaction Rollers', 'Drainage Networks']
     }
   ];
 

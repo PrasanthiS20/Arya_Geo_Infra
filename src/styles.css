@@ -1,13 +1,15 @@
 /* Arya Geo Infra - Global Design System & Styles */
 :root {
-  /* Brand Primary Colors */
-  --agi-navy-950: #04101e;
-  --agi-navy-900: #07172b;
-  --agi-navy-800: #0a213e;
-  --agi-navy-700: #0f2d52;
-  --agi-navy-600: #163b6b;
-  --agi-blue-500: #1e5296;
-  --agi-blue-400: #3b82f6;
+  /* Brand Primary Colors - Calibrated exactly to Arya Geo Infra Logo */
+  --agi-navy-950: #01244e;
+  --agi-navy-900: #01295a;
+  --agi-navy-800: #023971;
+  --agi-navy-700: #064a8f;
+  --agi-navy-600: #0a5cae;
+  --agi-blue-500: #126ec9;
+  --agi-blue-400: #2b8ce6;
+  --agi-blue-100: #e8f2fc;
+  --agi-blue-50: #f3f8fd;
 
   /* Brand Accent Golds */
   --agi-gold-600: #b58012;

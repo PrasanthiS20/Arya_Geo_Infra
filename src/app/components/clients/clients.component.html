@@ -1,0 +1,267 @@
+<section id="clients" class="section clients-section">
+  <!-- Subtle Ambient Glow -->
+  <div class="clients-glow glow-top"></div>
+  <div class="clients-glow glow-bottom"></div>
+
+  <div class="container relative-z">
+    <!-- Section Header -->
+    <div class="clients-header-row">
+      <div class="clients-header-left">
+        <div class="section-tag">PROVEN TRACK RECORD</div>
+        <h2 class="section-title">Clients &amp; Project Engagements</h2>
+      </div>
+      <div class="clients-header-right">
+        <p class="section-desc">
+          Partnering with leading infrastructure developers, EPC contractors, and government agencies to deliver precision engineering solutions.
+        </p>
+        <button class="btn btn-outline-primary add-client-btn" (click)="openAddModal()">
+          <svg viewBox="0 0 20 20" fill="currentColor" class="plus-icon">
+            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+          </svg>
+          <span>Add Client</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Stats Metric Strip -->
+    <div class="stats-strip">
+      @for (stat of stats; track stat.label) {
+        <div class="stat-card">
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+
+    <!-- Category Filter Bar -->
+    <div class="clients-filter-bar">
+      <div class="filter-pills">
+        @for (cat of categories; track cat.id) {
+          <button 
+            class="filter-pill" 
+            [class.active]="selectedCategory() === cat.id"
+            (click)="setCategory(cat.id)"
+          >
+            {{ cat.label }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- Client Showcase Cards Grid -->
+    <div class="clients-grid">
+      @for (client of filteredClients(); track client.id) {
+        <div class="client-card">
+          <!-- Card Header / Client Info -->
+          <div class="client-card-top">
+            <div class="client-avatar-badge">
+              <span class="avatar-initials">{{ client.logoInitial }}</span>
+            </div>
+            <div class="client-info-meta">
+              <div class="client-name-row">
+                <h3 class="client-org-name">{{ client.clientName }}</h3>
+                <span class="status-badge" [class.status-ongoing]="client.status === 'Ongoing'">
+                  {{ client.status }}
+                </span>
+              </div>
+              <div class="client-sub-row">
+                <span class="client-category-tag">{{ client.categoryLabel }}</span>
+                <span class="meta-separator">•</span>
+                <span class="client-location">
+                  <svg viewBox="0 0 20 20" fill="currentColor" class="loc-icon">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                  </svg>
+                  {{ client.location }}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Title & Scope -->
+          <div class="client-project-body">
+            <h4 class="project-title">{{ client.projectTitle }}</h4>
+            <p class="project-scope">{{ client.scopeOfWork }}</p>
+          </div>
+
+          <!-- Key Impact Metrics Strip -->
+          <div class="impact-metrics-row">
+            @for (m of client.impactMetrics; track m.label) {
+              <div class="impact-metric">
+                <span class="metric-val">{{ m.value }}</span>
+                <span class="metric-lbl">{{ m.label }}</span>
+              </div>
+            }
+          </div>
+
+          <!-- Key Deliverables List -->
+          <div class="deliverables-box">
+            <span class="deliverables-heading">Key Scope Deliverables:</span>
+            <ul class="deliverables-list">
+              @for (deliv of client.deliverables; track deliv) {
+                <li>
+                  <svg class="check-svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  <span>{{ deliv }}</span>
+                </li>
+              }
+            </ul>
+          </div>
+
+          <!-- Tools Used Tags -->
+          <div class="client-card-footer">
+            <span class="tools-label">Engineering Stack:</span>
+            <div class="client-tools-tags">
+              @for (t of client.toolsUsed; track t) {
+                <span class="client-tool-pill">{{ t }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Bottom Partnership Callout -->
+    <div class="client-cta-banner">
+      <div class="cta-banner-content">
+        <h3>Ready to Partner with Arya Geo Infra on Your Next Infrastructure Project?</h3>
+        <p>From feasibility studies and OpenRoads corridor design to turnkey construction supervision, we deliver dependable accuracy.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary cta-banner-btn">
+        <span>Engage Our Team</span>
+        <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Add Client Modal -->
+@if (isAddModalOpen()) {
+  <div class="modal-backdrop" (click)="closeAddModal()">
+    <div class="modal-card add-client-modal" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <span class="modal-tag">CLIENT ENGAGEMENT</span>
+          <h3 class="modal-title">Add Client &amp; Project Record</h3>
+        </div>
+        <button class="modal-close-btn" (click)="closeAddModal()" aria-label="Close Modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        @if (successMessage()) {
+          <div class="alert-success">
+            {{ successMessage() }}
+          </div>
+        }
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Client / Organization Name *</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              placeholder="e.g. Acme Infra &amp; Construction Ltd" 
+              [ngModel]="newClientName()"
+              (ngModelChange)="newClientName.set($event)"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Infrastructure Sector *</label>
+            <select 
+              class="form-control"
+              [ngModel]="newCategory()"
+              (ngModelChange)="newCategory.set($event)"
+            >
+              <option value="highways">Highways &amp; Expressways</option>
+              <option value="urban">Urban &amp; Smart Infrastructure</option>
+              <option value="industrial">Industrial &amp; Land Dev</option>
+              <option value="commercial">Commercial &amp; Townships</option>
+              <option value="water">Water &amp; Geospatial</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Project Location</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              placeholder="e.g. Hyderabad, Telangana" 
+              [ngModel]="newLocation()"
+              (ngModelChange)="newLocation.set($event)"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Project Title</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              placeholder="e.g. 6-Lane Regional Corridor Geometric Design" 
+              [ngModel]="newProjectTitle()"
+              (ngModelChange)="newProjectTitle.set($event)"
+            />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Scope of Work &amp; Description</label>
+            <textarea 
+              rows="3" 
+              class="form-control" 
+              placeholder="Describe the scope of engineering, CAD, OpenRoads modeling, or construction supervision..." 
+              [ngModel]="newScopeOfWork()"
+              (ngModelChange)="newScopeOfWork.set($event)"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Key Metric / Scope Size</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              placeholder="e.g. 35.0 km Corridor / 150 Acres" 
+              [ngModel]="newMetric1()"
+              (ngModelChange)="newMetric1.set($event)"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Software Tools (comma separated)</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              placeholder="OpenRoads Designer, Civil 3D, AutoCAD" 
+              [ngModel]="newTools()"
+              (ngModelChange)="newTools.set($event)"
+            />
+          </div>
+
+          <div class="form-group full-width">
+            <label class="form-label">Key Deliverables (comma separated)</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Geometric Alignment, Cross-Sections, Drainage Profiling, BOQ" 
+              [ngModel]="newDeliverables()"
+              (ngModelChange)="newDeliverables.set($event)"
+            />
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary text-dark" (click)="closeAddModal()">Cancel</button>
+          <button class="btn btn-primary" (click)="addNewClient()">
+            <span>Save &amp; Add Client</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+}

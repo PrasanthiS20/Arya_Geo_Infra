@@ -90,17 +90,17 @@
   bottom: 1.25rem;
   left: 1.25rem;
   right: 1.25rem;
-  background: rgba(7, 23, 43, 0.9);
+  background: rgba(1, 41, 90, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 154, 27, 0.4);
+  border: 1px solid rgba(212, 154, 27, 0.45);
   border-radius: 10px;
   padding: 0.85rem 1.15rem;
   display: flex;
   align-items: center;
   gap: 0.85rem;
   color: #ffffff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 25px rgba(1, 36, 78, 0.4);
 }
 
 .badge-icon {
@@ -144,7 +144,7 @@
 /* Callout Under Picture */
 .ceo-callout {
   margin-top: 1.25rem;
-  background: var(--agi-navy-900);
+  background: linear-gradient(135deg, #01244e 0%, #01295a 100%);
   border-left: 4px solid var(--agi-gold-500);
   border-radius: 8px;
   padding: 1.15rem 1.4rem;
