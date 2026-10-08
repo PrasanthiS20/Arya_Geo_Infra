@@ -1,0 +1,10 @@
+node_modules
+dist
+.angular
+.git
+.github
+.vscode
+.env
+.env.*
+scratch
+npm-debug.log*

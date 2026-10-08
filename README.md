@@ -38,6 +38,32 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ## Deploying With Coolify
 
+### Dockerfile (Recommended)
+
+The root `Dockerfile` builds the application with Node.js 22.22.3 and serves only the production browser files with Nginx on port 80. Nginx includes SPA fallback for client-side routes. This bypasses Nixpacks and its older Node.js package snapshot.
+
+Commit and push `Dockerfile`, `.dockerignore`, and `nginx.conf`, then configure the existing Coolify application:
+
+| Setting | Value |
+| --- | --- |
+| Build Pack | `Dockerfile` |
+| Base Directory | `/` |
+| Dockerfile Location | `/Dockerfile` |
+| Ports Exposes | `80` |
+
+Save and redeploy the latest commit. Install/build commands, Publish Directory, and the Nixpacks static-site option are not used for this build pack; the Dockerfile handles compilation and hosting. The existing `nixpacks.toml` and `NIXPACKS_NODE_VERSION` have no effect when using the Dockerfile build pack. If logs still use `ghcr.io/railwayapp/nixpacks`, Coolify has not switched to the Dockerfile build pack.
+
+To test locally with Docker installed:
+
+```bash
+docker build -t arya-geo-infra .
+docker run --rm -p 8080:80 arya-geo-infra
+```
+
+Open `http://localhost:8080/`.
+
+### Nixpacks (Alternative)
+
 Build from the repository root and serve the generated browser files as a static site. For the Nixpacks build pack, use these settings:
 
 | Setting | Value |
