@@ -29,14 +29,25 @@ export class ServicesComponent {
       tools: ['OpenRoads Designer', 'Civil 3D', 'AutoCAD', 'AutoTURN']
     },
     {
-      id: 'autocad-design-drafting',
-      title: 'AutoCAD Design & Drafting',
-      shortDesc: 'Precise 2D drafting and detailing that keeps engineering deliverables consistent and accurate.',
+      id: 'civil-3d-services',
+      title: 'AutoCAD Civil 3D Services',
+      shortDesc: 'Dynamic 3D terrain modeling, corridor design, site grading, and automated plan-profile deliverables.',
       category: 'design',
       icon: 'drafting',
-      fullDesc: 'High-precision CAD drafting covering general arrangement drawings, structural details, utilities layout, and municipal standard compliance with layered CAD standards.',
-      features: ['2D Geometric Detailing', 'Standard Layering & Legends', 'Utility Conflict Overlays', 'Tender-Ready Drawing Sets'],
-      tools: ['AutoCAD', 'Bentley MicroStation', 'AutoCAD Map 3D']
+      fullDesc: 'Comprehensive Autodesk Civil 3D engineering workflows for highways, land development, and utilities. We build parametric surface models (TIN/DTM), dynamic horizontal & vertical alignments, cross-sections, pipe networks, and automated earthwork cut/fill balances.',
+      features: [
+        'Dynamic Surface & DTM Modeling',
+        'Corridor & Assembly Modeling (Subassembly Composer)',
+        'Storm & Sanitary Pipe Networks',
+        'Automated Plan & Profile Sheet Generation',
+        'Earthwork Cut/Fill & Volumetric Balancing'
+      ],
+      tools: [
+        'Autodesk Civil 3D',
+        'AutoCAD',
+        'Autodesk Subassembly Composer',
+        'Vehicle Tracking'
+      ]
     },
     {
       id: 'openroads-designer',
