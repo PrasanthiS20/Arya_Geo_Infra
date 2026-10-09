@@ -29,18 +29,20 @@ export class ServicesComponent {
       tools: ['OpenRoads Designer', 'Civil 3D', 'AutoCAD', 'AutoTURN']
     },
     {
-      id: 'civil-3d-services',
-      title: 'AutoCAD Civil 3D Services',
-      shortDesc: 'Dynamic 3D terrain modeling, corridor design, site grading, and automated plan-profile deliverables.',
+      id: 'civil-3d-design-drafting',
+      title: 'Civil 3D Design & Drafting',
+      shortDesc: 'Comprehensive civil infrastructure design using Autodesk Civil 3D, including road alignments, profiles, corridor modeling, grading, cross-sections, and earthwork quantity calculations.',
       category: 'design',
+      categoryBadge: 'CIVIL ENGINEERING',
       icon: 'drafting',
-      fullDesc: 'Comprehensive Autodesk Civil 3D engineering workflows for highways, land development, and utilities. We build parametric surface models (TIN/DTM), dynamic horizontal & vertical alignments, cross-sections, pipe networks, and automated earthwork cut/fill balances.',
+      fullDesc: 'Comprehensive civil infrastructure design using Autodesk Civil 3D, including road alignments, profiles, corridor modeling, grading, cross-sections, and earthwork quantity calculations with full MoRTH, IRC, and municipal standard compliance.',
       features: [
-        'Dynamic Surface & DTM Modeling',
-        'Corridor & Assembly Modeling (Subassembly Composer)',
-        'Storm & Sanitary Pipe Networks',
-        'Automated Plan & Profile Sheet Generation',
-        'Earthwork Cut/Fill & Volumetric Balancing'
+        'Road Horizontal & Vertical Alignments',
+        'Dynamic Longitudinal Profiles & Cross-Sections',
+        'Corridor Modeling & Assembly Design',
+        'Site Grading Optimization & Surface DTM',
+        'Earthwork Quantity Takeoffs & Volumetric Cut/Fill',
+        'Stormwater & Subsurface Utility Pipe Networks'
       ],
       tools: [
         'Autodesk Civil 3D',

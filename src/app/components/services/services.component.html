@@ -195,7 +195,7 @@
                 }
               }
             </div>
-            <span class="card-accent-tag">{{ service.category | uppercase }}</span>
+            <span class="card-accent-tag">{{ service.categoryBadge || (service.category | uppercase) }}</span>
           </div>
 
           <!-- Card Body -->

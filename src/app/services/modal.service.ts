@@ -6,6 +6,7 @@ export interface ServiceItem {
   shortDesc: string;
   fullDesc?: string;
   category: 'design' | 'modeling' | 'gis' | 'engineering' | 'surveying' | 'construction';
+  categoryBadge?: string;
   icon: string;
   features?: string[];
   tools?: string[];
