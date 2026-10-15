@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Do not rewrite actual files or directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Allow direct access to API scripts
+  RewriteRule ^api/(.*)$ api/$1 [L]
+
+  # Fallback all other requests to Angular SPA index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Security: prevent directory listing
+Options -Indexes
+
+# Enable Gzip compression for faster loading
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>

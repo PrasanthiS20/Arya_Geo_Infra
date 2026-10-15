@@ -226,6 +226,29 @@ img {
   transform: translateY(-2px);
 }
 
+.btn-outline-dark, .text-dark {
+  background: #ffffff;
+  color: var(--agi-navy-900);
+  border: 1px solid var(--border-light);
+}
+
+.btn-outline-dark:hover, .text-dark:hover {
+  background: #f1f5f9;
+  border-color: var(--agi-gray-400);
+  color: var(--agi-navy-950);
+}
+
+.btn-arrow {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
 .btn-navy-outline {
   background: transparent;
   color: var(--agi-navy-900);

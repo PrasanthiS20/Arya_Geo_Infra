@@ -185,11 +185,23 @@
 
 .modal-footer {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  padding-top: 1.25rem;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--border-light);
+}
+
+.btn-arrow {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(3px);
 }
 
 @media (max-width: 600px) {
@@ -198,12 +210,12 @@
   }
 
   .modal-card {
-    max-height: 94vh;
+    max-height: 92vh;
     border-radius: 10px;
   }
 
   .modal-header {
-    padding: 1rem 1.15rem;
+    padding: 0.9rem 1.15rem;
   }
 
   .modal-title {
@@ -211,12 +223,48 @@
   }
 
   .modal-body {
-    padding: 1.15rem;
+    padding: 1rem 1rem 1.25rem;
+  }
+
+  .detail-section {
+    padding: 0.9rem;
+    margin-bottom: 0.85rem;
   }
 
   .modal-footer {
-    flex-direction: column;
-    gap: 0.75rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0.65rem;
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+  }
+
+  .modal-footer .btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.88rem;
+  }
+
+  .modal-footer .btn-outline-dark {
+    flex: 0 0 auto;
+    padding-inline: 1.15rem;
+  }
+
+  .modal-footer .btn-primary {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .btn-arrow {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .modal-footer {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
   }
 
   .modal-footer .btn {

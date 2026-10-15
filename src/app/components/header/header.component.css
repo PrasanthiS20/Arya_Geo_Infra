@@ -51,7 +51,8 @@
   white-space: nowrap;
 }
 
-.top-phone, .top-mail {
+.top-phone,
+.top-mail {
   color: var(--agi-gold-400);
   font-weight: 600;
   white-space: nowrap;
@@ -59,7 +60,8 @@
   transition: color var(--transition-fast);
 }
 
-.top-phone:hover, .top-mail:hover {
+.top-phone:hover,
+.top-mail:hover {
   color: #ffffff;
   text-decoration: underline;
 }
@@ -303,6 +305,7 @@
   .top-bar-left {
     display: none;
   }
+
   .top-bar-container {
     justify-content: center;
   }
