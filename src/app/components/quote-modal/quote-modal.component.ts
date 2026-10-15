@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, HostListener, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ModalService } from '../../services/modal.service';
@@ -26,6 +26,13 @@ export class QuoteModalComponent {
 
   isSubmitting = signal<boolean>(false);
   isSubmitted = signal<boolean>(false);
+
+  @HostListener('window:keydown.escape')
+  onEscape(): void {
+    if (this.modalService.isQuoteModalOpen()) {
+      this.close();
+    }
+  }
 
   close(): void {
     this.modalService.closeQuoteModal();

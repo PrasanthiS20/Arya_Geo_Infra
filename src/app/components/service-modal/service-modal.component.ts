@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalService } from '../../services/modal.service';
 
@@ -11,6 +11,13 @@ import { ModalService } from '../../services/modal.service';
 })
 export class ServiceModalComponent {
   modalService = inject(ModalService);
+
+  @HostListener('window:keydown.escape')
+  onEscape(): void {
+    if (this.modalService.isServiceModalOpen()) {
+      this.close();
+    }
+  }
 
   close(): void {
     this.modalService.closeServiceModal();

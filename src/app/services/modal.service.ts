@@ -31,7 +31,9 @@ export class ModalService {
   closeQuoteModal(): void {
     this.isQuoteModalOpen.set(false);
     this.selectedServiceForQuote.set('');
-    document.body.style.overflow = '';
+    if (!this.isServiceModalOpen()) {
+      document.body.style.overflow = '';
+    }
   }
 
   openServiceModal(service: ServiceItem): void {
@@ -43,6 +45,8 @@ export class ModalService {
   closeServiceModal(): void {
     this.isServiceModalOpen.set(false);
     this.selectedService.set(null);
-    document.body.style.overflow = '';
+    if (!this.isQuoteModalOpen()) {
+      document.body.style.overflow = '';
+    }
   }
 }

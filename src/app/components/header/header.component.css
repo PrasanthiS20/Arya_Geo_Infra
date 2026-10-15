@@ -36,16 +36,26 @@
   align-items: center;
   gap: 0.6rem;
   color: var(--agi-gold-400);
+  letter-spacing: 0.04em;
+}
+
+.top-bar-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .top-location {
   color: #cbd5e1;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .top-phone, .top-mail {
   color: var(--agi-gold-400);
   font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
   transition: color var(--transition-fast);
 }
 
@@ -202,21 +212,27 @@
 
 /* Mobile Drawer */
 .mobile-drawer {
-  display: none;
-  position: fixed;
-  top: 110px;
+  display: block;
+  position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
   background-color: var(--agi-white);
-  border-bottom: 2px solid var(--agi-gold-500);
-  box-shadow: var(--shadow-xl);
+  border-bottom: 2px solid transparent;
+  box-shadow: none;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-in-out;
+  visibility: hidden;
+  pointer-events: none;
+  transition: max-height 0.35s ease-in-out, visibility 0.35s ease-in-out, border-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
 }
 
 .mobile-drawer.open {
-  max-height: 480px;
+  max-height: 520px;
+  visibility: visible;
+  pointer-events: auto;
+  border-bottom: 2px solid var(--agi-gold-500);
+  box-shadow: var(--shadow-xl);
 }
 
 .mobile-drawer-content {
@@ -283,17 +299,57 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .top-bar-left {
     display: none;
   }
   .top-bar-container {
     justify-content: center;
   }
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    padding: 0.35rem 0;
+    font-size: 0.68rem;
+  }
+
+  .top-bar-container {
+    justify-content: center;
+    padding-inline: 0.75rem;
+  }
+
+  .top-bar-right {
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .bullet-loc {
+    display: none;
+  }
+
+  .top-bar-group {
+    justify-content: center;
+    gap: 0.45rem;
+  }
+
   .quote-btn {
     display: none;
   }
+
   .logo-img {
     height: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .top-bar {
+    font-size: 0.63rem;
+  }
+
+  .top-bar-group {
+    gap: 0.35rem;
   }
 }

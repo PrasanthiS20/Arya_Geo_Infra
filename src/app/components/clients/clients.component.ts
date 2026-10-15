@@ -212,10 +212,12 @@ export class ClientsComponent {
   openAddModal(): void {
     this.isAddModalOpen.set(true);
     this.successMessage.set('');
+    document.body.style.overflow = 'hidden';
   }
 
   closeAddModal(): void {
     this.isAddModalOpen.set(false);
+    document.body.style.overflow = '';
   }
 
   addNewClient(): void {
